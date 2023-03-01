@@ -1,0 +1,240 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:process_name",
+ "creation": "2023-01-04 14:24:10.948624",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "process_name",
+  "workstation",
+  "process_type",
+  "column_break_5",
+  "department",
+  "costing_method",
+  "value_scrap",
+  "materials_section",
+  "materials",
+  "section_break_k9x0i",
+  "materials_qty",
+  "column_break_kwyzv",
+  "materials_amount",
+  "finished_products_section",
+  "finished_products",
+  "section_break_iabz5",
+  "finished_products_qty",
+  "column_break_qhjvb",
+  "finished_products_amount",
+  "scrap_section",
+  "scrap",
+  "section_break_zklxu",
+  "scrap_qty",
+  "all_finish_qty",
+  "column_break_mdkf0",
+  "scrap_amount",
+  "total_all_amount",
+  "section_break_jz8l1",
+  "operation_cost",
+  "total_operation_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Manufacturing Department"
+  },
+  {
+   "fieldname": "process_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process Type",
+   "options": "Process Type"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "costing_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Costing Method",
+   "options": "\nPhysical measurement\nRelative Sales Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "materials_section",
+   "fieldtype": "Section Break",
+   "label": "Materials"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Process Item"
+  },
+  {
+   "fieldname": "finished_products_section",
+   "fieldtype": "Section Break",
+   "label": "Finished Products"
+  },
+  {
+   "fieldname": "finished_products",
+   "fieldtype": "Table",
+   "label": "Finished Products",
+   "options": "Process Item"
+  },
+  {
+   "fieldname": "scrap_section",
+   "fieldtype": "Section Break",
+   "label": "Scrap"
+  },
+  {
+   "fieldname": "scrap",
+   "fieldtype": "Table",
+   "label": "Scrap",
+   "options": "Process Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_scrap",
+   "fieldtype": "Check",
+   "label": "Include Scrap in Valuation"
+  },
+  {
+   "fieldname": "section_break_jz8l1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "operation_cost",
+   "fieldtype": "Table",
+   "label": "Operation Cost",
+   "options": "Operation Cost"
+  },
+  {
+   "fieldname": "materials_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_kwyzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "materials_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "finished_products_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_qhjvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "finished_products_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_k9x0i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_iabz5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zklxu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scrap_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_mdkf0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scrap_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "total_operation_cost",
+   "fieldtype": "Data",
+   "label": "Total Operation Cost"
+  },
+  {
+   "fieldname": "all_finish_qty",
+   "fieldtype": "Float",
+   "label": "All Finish Qty"
+  },
+  {
+   "fieldname": "total_all_amount",
+   "fieldtype": "Float",
+   "label": "Total all amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Process Order",
+   "link_fieldname": "process_name"
+  }
+ ],
+ "modified": "2023-03-01 10:00:03.133340",
+ "modified_by": "Administrator",
+ "module": "manufacuring mode",
+ "name": "Process Definition",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
